@@ -1,0 +1,14 @@
+footer {
+    height: 25px;
+    width: 100vw;
+    background-color: rgb(160, 11, 11);
+    color: white;
+    text-align: center;
+  }
+
+.logoutText {
+    font-size: 12pt;
+    color: whitesmoke;
+    margin: 10px;
+    text-decoration: underline;
+}
