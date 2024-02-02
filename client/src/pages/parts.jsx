@@ -6,9 +6,13 @@ import TitleBlock from '../components/TitleBlock'
 const Parts = () => {
     const [parts, setParts] = useState([])
 
+
     useEffect(() => {
-        axios.get('http://localhost:4000/api/parts')
-            .then(response => setParts(response.data))
+        const timeoutId = setTimeout(() => {
+            axios.get('http://localhost:4000/api/parts')
+                .then(response => setParts(response.data))
+        }, 2000);
+        return () => clearTimeout(timeoutId);
     }, [])
 
     return (

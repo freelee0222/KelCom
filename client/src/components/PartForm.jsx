@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
 import { Form, Button } from 'react-bootstrap'
 import axios from 'axios'
 
 const PartForm = ({ parts, params }) => {
-
     const [part, setPart] = useState({})
-    const navigate = useNavigate()
 
     const handleChange = (e) => {
         const name = e.target.name
@@ -23,7 +20,7 @@ const PartForm = ({ parts, params }) => {
         } else {
             addPart(part)
         }
-        navigate( "/parts")
+        window.location = ('./parts')
     }
 
     useEffect(() => {
