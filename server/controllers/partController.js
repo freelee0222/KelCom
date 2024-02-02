@@ -8,7 +8,7 @@ module.exports = {
             .catch(err => res.status(500).json(err))
     },
     readParts(req, res) {
-        Part.find().sort({time: 1})
+        Part.find()
         .then(parts => res.json(parts))
         .catch(err => res.status(500).json(err))
     },

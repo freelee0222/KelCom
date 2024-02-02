@@ -20,7 +20,7 @@ const PartForm = ({ parts, params }) => {
         } else {
             addPart(part)
         }
-        window.location = ('/parts')
+         window.location = ('/parts')
     }
 
     useEffect(() => {
@@ -32,6 +32,7 @@ const PartForm = ({ parts, params }) => {
 
     const addPart = (part) => {
         axios.post('http://localhost:4000/api/add-part', part)
+        .then(res => console.log(res))
     }
 
     const editPart = (part) => {
