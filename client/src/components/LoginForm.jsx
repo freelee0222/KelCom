@@ -26,7 +26,6 @@ function LoginForm() {
         feedback.innerHTML = ""
         axios.post('http://localhost:4000/api/login', inputs)
             .then(response => {
-                console.log(response.data)
                 const { token } = response.data
                 localStorage.setItem('api_token', JSON.stringify(token))
             })
@@ -38,7 +37,7 @@ function LoginForm() {
                     }
                 })
                     .then(response => {
-                        setUser(response.data.account)
+                        setUser(response.data.user)
                         navigate('/dashboard')
                     })
                     .catch(err => feedback.innerHTML += err.response.data)

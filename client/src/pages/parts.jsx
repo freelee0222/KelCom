@@ -8,11 +8,10 @@ const Parts = () => {
 
 
     useEffect(() => {
-        const timeoutId = setTimeout(() => {
+        setInterval(() => {
             axios.get('http://localhost:4000/api/parts')
                 .then(response => setParts(response.data))
-        }, 2000);
-        return () => clearTimeout(timeoutId);
+        }, 750);
     }, [])
 
     return (

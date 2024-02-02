@@ -4,6 +4,7 @@ import { useUser } from '../components/UserContext'
 
 const Dashboard = () => {
     const { user } = useUser()
+    console.log(user)
 
     return (
         <>

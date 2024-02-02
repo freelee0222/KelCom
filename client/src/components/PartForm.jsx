@@ -20,7 +20,7 @@ const PartForm = ({ parts, params }) => {
         } else {
             addPart(part)
         }
-        window.location = ('./parts')
+        window.location = ('/parts')
     }
 
     useEffect(() => {

@@ -7,7 +7,7 @@ const memberSchema = new Schema(
     {
         firstName: String,
         lastName: String,
-        age: Number,
+        role: String,
         phone: String,
         password: String,
         email: { type: String, unique: true }
