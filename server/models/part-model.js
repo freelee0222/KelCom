@@ -8,10 +8,6 @@ const partSchema = new Schema(
         option1: String,
         option2: Number,
         description: String,
-        items: {
-            type: [microSchema],
-            default: undefined
-          }
     }
     
 )
